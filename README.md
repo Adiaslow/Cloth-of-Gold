@@ -1,8 +1,13 @@
 # Cloth-of-Gold
+By Adam Murray and Sean Murray
+
+## Description:
 This is my game Cloth of Gold.
+
+## Links:
 Trello board: https://trello.com/b/HGbKfQSE/cloth-of-gold
 
-Current Status:
+## Current Status:
 - Scraping current version for useful code.
 - Starting new version in Unity.
 - Working on settting up 3-dimensional array system for holding the info for the ground tile, the enviornmental prop, the tile status effect (i.e. fire), and the player unit.
