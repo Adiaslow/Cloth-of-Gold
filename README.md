@@ -8,8 +8,8 @@ This is my game project "Cloth of Gold" using Unity and written in C#. Named aft
 Trello board: https://trello.com/b/HGbKfQSE/cloth-of-gold
 
 ## Current Status:
-- Scraping current version for useful code.
+- Scavanging previous version for useful code.
 - Starting new version in Unity.
-- Working on settting up 3-dimensional array system for holding the info for the ground tile, the enviornmental prop, the tile status effect (i.e. fire), and the player unit.
+- Working on settting up array system of shape (BOARD_WIDTH * BOARD_HEIGHT * 4) (X, Y, Z) for holding the info for the ground tile, the enviornmental prop, the tile status effect (i.e. on fire, can reproduce, etc.), and the player unit.
 - Working on getCellStatus() to return values from Z column in array.
 - Working on setCellAlive() to set if the cell has a unit on it or not.
