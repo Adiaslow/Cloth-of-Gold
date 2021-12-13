@@ -1,4 +1,4 @@
-# Cloth-of-Gold
+# Cloth of Gold
 By Adam Murray and Sean Murray
 
 ## Description:
