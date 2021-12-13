@@ -2,8 +2,7 @@
 By Adam Murray and Sean Murray
 
 ## Description:
-This is my game Cloth of Gold.
-
+This is my game project "Cloth of Gold" using Unity and written in C#. Named after the "cloth of gold" snail whos shell pigment pattern resembles the output of Stephen Wolframs "Rule 30" cellular automata. The premiss of the game is essentially a two-player checkers-like stratagy game in which the goal is to out-survive or destroy your opponent. The core mechanics of the game utilize various cellular automata algorithms (i.e. Conway's Game of Life and Termites), various noise algorithms (i.e. Perlin Noise and Open Simplex Noise), and custom AI search alogirthms.
 ## Links:
 Trello board: https://trello.com/b/HGbKfQSE/cloth-of-gold
 
