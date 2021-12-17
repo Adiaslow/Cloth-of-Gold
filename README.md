@@ -9,7 +9,4 @@ Trello board: https://trello.com/b/HGbKfQSE/cloth-of-gold
 
 ## Current Status:
 - Scavanging previous version for useful code.
-- Starting new version in Unity.
-- Working on settting up array system of shape (BOARD_WIDTH * BOARD_HEIGHT * 4) (X, Y, Z) for holding the info for the ground tile, the enviornmental prop, the tile status effect (i.e. on fire, can reproduce, etc.), and the player unit.
-- Working on getCellStatus() to return values from Z column in array.
-- Working on setCellAlive() to set if the cell has a unit on it or not.
+- Working on settting up GridManager.cs.
