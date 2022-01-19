@@ -6,29 +6,42 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    public int width { get; private set; }
-    public int height { get; private set; }
+    public int WIDTH { get; private set; }
+    public int HEIGHT { get; private set; }
+    public bool isInit { get; private set; }
 
     public GameObject[,] gridLayer;
 
     public GameObject[,] GenerateGridLayer()
     {
-        GameObject[,] gridLayer = new GameObject;
+        GameObject[,] gridLayer = new GameObject[WIDTH, HEIGHT];
 
         return gridLayer;
     }
 
+    public bool InitGridSize(int _width, int _height)
+    {
+        bool _success = true;
+        _success = this.SetGridWidth(WIDTH);
+        _success = this.SetGridHeight(HEIGHT);
+
+        this.isInit = _success;
+
+        return true;
+    }
+
     public bool SetGridWidth(int width)
     {
-        this.width = width;
+        this.WIDTH = width;
         return true;
     }
 
     public bool SetGridHeight(int height)
     {
-        this.height = height;
+        this.HEIGHT = height;
         return true;
     }
+
 }
 
 /*
