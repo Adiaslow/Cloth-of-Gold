@@ -1,19 +1,33 @@
+//GETTING BETTER
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int width { get; private set; }
+    public int height { get; private set; }
+
+    public GameObject[,] gridLayer;
+
+    public GameObject[,] GenerateGridLayer()
     {
-        
+        GameObject[,] gridLayer = new GameObject;
+
+        return gridLayer;
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool SetGridWidth(int width)
     {
-        
+        this.width = width;
+        return true;
+    }
+
+    public bool SetGridHeight(int height)
+    {
+        this.height = height;
+        return true;
     }
 }
 

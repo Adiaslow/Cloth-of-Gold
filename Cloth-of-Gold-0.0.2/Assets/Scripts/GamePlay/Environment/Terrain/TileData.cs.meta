@@ -4,14 +4,11 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - _highlight: {instanceID: 0}
-  - _grass: {fileID: 21300000, guid: 2c25e12975354444c856f316e089725c, type: 3}
-  - _fertileGrass: {fileID: 21300000, guid: c4f3a4f05607d458bb1ffe0ef3b4ab62, type: 3}
-  - _dryGrass: {fileID: 21300000, guid: 9c9fc8ddf920446f3b633fdbf47ca157, type: 3}
+  - _test: {fileID: 21300000, guid: cf0fe0cb3c8d142dcbf228a32413a928, type: 3}
   - _dirt: {fileID: 21300000, guid: 7263231c989c54411b44982ec85d32a8, type: 3}
-  - _tileRenderer: {instanceID: 0}
-  - _highlightRenderer: {instanceID: 0}
-  - _unit: {instanceID: 0}
+  - _grass: {fileID: 21300000, guid: 2c25e12975354444c856f316e089725c, type: 3}
+  - _dryGrass: {fileID: 21300000, guid: 9c9fc8ddf920446f3b633fdbf47ca157, type: 3}
+  - _fertileGrass: {fileID: 21300000, guid: c4f3a4f05607d458bb1ffe0ef3b4ab62, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

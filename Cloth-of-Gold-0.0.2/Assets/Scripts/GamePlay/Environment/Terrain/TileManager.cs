@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// FIX ME
+
 public class TileManager : MonoBehaviour
 {
-    [SerializeField] private Sprite _test, _dirt, _grass, _dryGrass, _fertileGrass;
+    [SerializeField] private TileData _tilePrefab;
 
     /*
     [SerializeField, Range(1.0f, 100.0f)] private float noiseScale = 1.0f;

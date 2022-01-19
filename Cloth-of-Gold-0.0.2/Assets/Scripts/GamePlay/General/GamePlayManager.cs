@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InGameManager : MonoBehaviour
+// FIX ME
+
+public class GamePlayManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

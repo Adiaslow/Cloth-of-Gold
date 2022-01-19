@@ -1,8 +1,10 @@
+// GOOD
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NoiseMap : MonoBehaviour
+public class PerlinNoiseManager : MonoBehaviour
 {
     public int x { get; private set; }
     public int y { get; private set; }
@@ -15,7 +17,7 @@ public class NoiseMap : MonoBehaviour
     public float yOffset { get; private set; }
     public bool isInit { get; private set; } = false;
 
-    public static float GetNoiseAt(int x, int y, float scale, float heightMultiplier, int octaves, float persistance, float lacunarity, float xOffset, float yOffset)
+    public static float GetPerlinNoiseAt(int x, int y, float scale, float heightMultiplier, int octaves, float persistance, float lacunarity, float xOffset, float yOffset)
     {
         float PerlinValue = 0f;
         float amplitude = 1f;
@@ -31,7 +33,7 @@ public class NoiseMap : MonoBehaviour
         // Return the noise value
         return PerlinValue * heightMultiplier;
     }
-    public bool Init_NM(int _x, int _y, float _scale, float _heightMultiplier, int _octaves, float _persistance, float _lacunarity, float _xOffset, float _yOffset)
+    public bool Init_PN(int _x, int _y, float _scale, float _heightMultiplier, int _octaves, float _persistance, float _lacunarity, float _xOffset, float _yOffset)
     {
         bool _success = true;
         _success = this.SetX(_x);

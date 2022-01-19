@@ -1,9 +1,17 @@
+// FIX ME
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitData : MonoBehaviour
+public class PlayerUnitData : MonoBehaviour
 {
+    [SerializeField] private Sprite _test, _blue, _red;
+
+    public void SetPlayerColor(string playerColor)
+    {
+
+    }
     /*
     //[SerializeField] private GameObject _unit;
 

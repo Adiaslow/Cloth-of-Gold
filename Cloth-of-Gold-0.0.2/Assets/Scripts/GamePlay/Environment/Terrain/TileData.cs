@@ -1,3 +1,5 @@
+// FIX ME
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,6 +7,8 @@ using UnityEngine;
 
 public class TileData : MonoBehaviour
 {
+    [SerializeField] private Sprite _test, _dirt, _grass, _dryGrass, _fertileGrass;
+
     /*
     public int PlayerAreaType;
     //public string terrainType;
