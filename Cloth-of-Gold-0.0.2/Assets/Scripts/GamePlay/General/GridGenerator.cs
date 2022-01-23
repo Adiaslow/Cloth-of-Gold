@@ -1,22 +1,22 @@
-//GETTING BETTER
+//GETTING BETTER BUT STILL NEED SERIOUS FIXING
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridManager : MonoBehaviour
+public class GridGenerator : MonoBehaviour
 {
     public int WIDTH { get; private set; }
     public int HEIGHT { get; private set; }
     public bool isInit { get; private set; }
 
-    public GameObject[,] gridLayer;
+    public TileData[,] TileGridLayer;
 
-    public GameObject[,] GenerateGridLayer()
+    public TileData[,] GenerateTileGrid()
     {
-        GameObject[,] gridLayer = new GameObject[WIDTH, HEIGHT];
+        TileData[,] tileGridLayer = new TileData[WIDTH, HEIGHT];
 
-        return gridLayer;
+        return tileGridLayer;
     }
 
     public bool InitGridSize(int _width, int _height)

@@ -1,4 +1,4 @@
-// GOOD
+// PRETTY GOOD
 
 using System.Collections;
 using System.Collections.Generic;
@@ -33,7 +33,7 @@ public class PerlinNoiseManager : MonoBehaviour
         // Return the noise value
         return PerlinValue * heightMultiplier;
     }
-    public bool Init_PN(int _x, int _y, float _scale, float _heightMultiplier, int _octaves, float _persistance, float _lacunarity, float _xOffset, float _yOffset)
+    public bool InitPN(int _x, int _y, float _scale, float _heightMultiplier, int _octaves, float _persistance, float _lacunarity, float _xOffset, float _yOffset)
     {
         bool _success = true;
         _success = this.SetX(_x);
@@ -103,5 +103,16 @@ public class PerlinNoiseManager : MonoBehaviour
     {
         this.yOffset = yOffsetValue;
         return true;
+    }
+
+    PerlinNoiseManager()
+    {
+        scale = 1.0f;
+        heightMultiplier = 100.0f;
+        octaves = 4;
+        persistance = 0.5f;
+        lacunarity = 0.5f;
+        xOffset = 100.0f;
+        yOffset = 100.0f;
     }
 }
