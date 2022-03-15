@@ -1,0 +1,4 @@
+#masterScript
+
+[[GenerateWorld]]
+[[SpawnPlayer]]

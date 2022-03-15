@@ -10,11 +10,11 @@ public class GridGenerator : MonoBehaviour
     public int HEIGHT { get; private set; }
     public bool isInit { get; private set; }
 
-    public TileData[,] TileGridLayer;
+    public GameObject[,] TileGridLayer;
 
-    public TileData[,] GenerateTileGrid()
+    public GameObject[,] GenerateTileGrid()
     {
-        TileData[,] tileGridLayer = new TileData[WIDTH, HEIGHT];
+        GameObject[,] tileGridLayer = new GameObject[WIDTH, HEIGHT];
 
         return tileGridLayer;
     }

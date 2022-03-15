@@ -1,0 +1,4 @@
+#function 
+
+[[NumFriendlyNeighbors]]
+[[NumHostileNeighbors]]

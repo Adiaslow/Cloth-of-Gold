@@ -31,10 +31,10 @@ public class TileData : MonoBehaviour
         return true;
     }
 
-    public TileData GetTile()
+    public GameObject GetTile()
     {
-        TileData tileData = new TileData();
-        return tileData;
+        GameObject _tilePrefab = new GameObject();
+        return _tilePrefab;
     }
 
     public bool SetTileType(int tileType)

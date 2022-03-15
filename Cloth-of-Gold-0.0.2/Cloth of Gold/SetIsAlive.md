@@ -1,0 +1,6 @@
+#function 
+
+[[IsAlive]]
+
+[[NumFriendlyNeighbors]]
+[[NumHostileNeighbors]]

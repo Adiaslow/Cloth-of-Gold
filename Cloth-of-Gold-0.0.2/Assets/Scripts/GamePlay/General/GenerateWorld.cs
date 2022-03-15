@@ -1,3 +1,5 @@
+// GOOD
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,12 +32,12 @@ public class GenerateWorld : MonoBehaviour
     private void SetWorldSize(int _width, int _height)
     {
         _gridGenerator.SetGridWidth(_width);
-        Debug.Log("World Width Set");
+        // Debug.Log("World Width Set to " + _width.ToString());
 
         _gridGenerator.SetGridHeight(_height);
-        Debug.Log("World Height Set");
+        // Debug.Log("World Height Set to " + _height.ToString());
 
-        Debug.Log("World Size Set");
+        Debug.Log("World Size Set to " + $"({_width}, {_height})");
 
     }
 

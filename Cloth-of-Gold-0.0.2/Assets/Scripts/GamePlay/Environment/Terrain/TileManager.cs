@@ -15,7 +15,7 @@ public class TileManager : MonoBehaviour
         return _tilePrefab;
     }
 
-    public void SetTiles(int x, int y, TileData spawnedTile)
+    public void SetTiles(int x, int y, GameObject spawnedTile)
     {
 
         var TileType = 0;

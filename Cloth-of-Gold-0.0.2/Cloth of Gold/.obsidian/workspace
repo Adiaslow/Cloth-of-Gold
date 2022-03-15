@@ -1,0 +1,98 @@
+{
+  "main": {
+    "id": "e290024af2b3ca5e",
+    "type": "split",
+    "children": [
+      {
+        "id": "8426b66b479a4c0c",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "512c64cafa784b58",
+    "type": "split",
+    "children": [
+      {
+        "id": "0eb192337a3cdc49",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b78df40e92bdb15c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "0e811f0294228dd6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 298
+  },
+  "right": {
+    "id": "b12aeb3580c4d004",
+    "type": "split",
+    "children": [
+      {
+        "id": "200170bb0520caca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92597708906e18bd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "8426b66b479a4c0c",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "SetIsAlive.md",
+    "PlayerUnitManager.md",
+    "CountNeighbors.md",
+    "PlayerUnitData.md",
+    "NumHostileNeighbors.md",
+    "NumFriendlyNeighbors.md",
+    "NpcUnitData.md",
+    "IsAlive.md",
+    "SetIsOutside.md"
+  ]
+}

@@ -9,6 +9,7 @@ public class TileMapGenerator : MonoBehaviour
     [SerializeField] private GridGenerator _gridGenerator;
     [SerializeField] private TileManager _tileManager;
     [SerializeField] private TileData _tileData;
+    [SerializeField] private GameObject _tilePrefab;
 
     public void GenerateTerrain()
     {
@@ -22,6 +23,7 @@ public class TileMapGenerator : MonoBehaviour
             for (int y = 0; y < _height; y++)
             {
                 string tileName = $"Tile {x} {y}";
+                Vector2 tilePos = new Vector2(x, y);
                 int tilePosX = x;
                 int tilePosY = y;
                 Quaternion tileRot = Quaternion.identity;
@@ -29,9 +31,9 @@ public class TileMapGenerator : MonoBehaviour
                 _tileData.InitTile(default, tileName, tilePosX, tilePosY , tileRot);
 
                 
-                // var spawnedTile = Instantiate(_tileData.GetTile(), new Vector2(x,y), Quaternion.identity);
+                var spawnedTile = Instantiate(_tileData.GetTile(), tilePos, tileRot);
 
-                terrainGrid[x, y] = _tileData.GetTile();
+                terrainGrid[x, y] = spawnedTile;
 
                 //// terrainGrid[x, y].name = $"Tile {x} {y}";
 
