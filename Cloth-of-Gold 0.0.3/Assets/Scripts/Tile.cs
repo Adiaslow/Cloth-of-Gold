@@ -13,166 +13,166 @@ public class Tile : MonoBehaviour
 }
 
 
-    /*
-    // Tile variables
-    public TileType tileType { get; private set; }
-    public string tileName { get; private set; }
-    public Vector2 tilePos { get; private set; }
+/*
+// Tile variables
+public TileType tileType { get; private set; }
+public string tileName { get; private set; }
+public Vector2 tilePos { get; private set; }
 
-    public enum TileType { Test, Grass, FertileGrass, DryGrass, Dirt }
+public enum TileType { Test, Grass, FertileGrass, DryGrass, Dirt }
 
-    // Editor sprite assignment
-    [SerializeField] private Sprite[] _spriteArray;
+// Editor sprite assignment
+[SerializeField] private Sprite[] _spriteArray;
 
-    public bool isInit { get; private set; } = false;
+public bool isInit { get; private set; } = false;
 
 
-    // Confirms that all variables are assigned
-    public Tile InitTile(TileType _tileType, Vector2 _tilePos)
+// Confirms that all variables are assigned
+public Tile InitTile(TileType _tileType, Vector2 _tilePos)
+{
+
+    bool _success = true;
+    _success = tileData.SetTileType(_tileType);
+    _success = tileData.SetTileName(_tilePos);
+    _success = tileData.SetTilePos(_tilePos);
+
+    tileData.isInit = _success;
+
+    if (isInit == true)
     {
-
-        bool _success = true;
-        _success = tileData.SetTileType(_tileType);
-        _success = tileData.SetTileName(_tilePos);
-        _success = tileData.SetTilePos(_tilePos);
-
-        tileData.isInit = _success;
-
-        if (isInit == true)
-        {
-          return tileData;
-        }
-        else
-        {
-            return null;
-        }
+      return tileData;
     }
-
-    // Public method for setting tile type
-    public bool SetTileType(TileType tileType)
+    else
     {
-        switch (tileType)
-        {
-            case TileType.Dirt:
-                tileData.tileType = TileType.Dirt;
-                tileData._tileRenderer.sprite = _spriteArray[0];
-                break;
-
-            case TileType.DryGrass:
-                tileData.tileType = TileType.DryGrass;
-                tileData._tileRenderer.sprite = _spriteArray[1];
-                break;
-
-            case TileType.Grass:
-                tileData.tileType = TileType.Grass;
-                tileData._tileRenderer.sprite = _spriteArray[2];
-                break;
-
-            case TileType.FertileGrass:
-                tileData.tileType = TileType.FertileGrass;
-                tileData._tileRenderer.sprite = _spriteArray[3];
-                break;
-
-            default:
-                tileData.tileType = TileType.Test;
-                tileData._tileRenderer.sprite = _spriteArray[4];
-                break;
-        }
-
-        return true;
-    }
-
-    public bool SetTileName(Vector2 tilePos)
-    {
-        tileData.tileName = tilePos + " " + tileType;
-        return true;
-    }
-
-    public bool SetTilePos(Vector2 _tilePos)
-    {
-        tileData.tilePos = _tilePos;
-        return true;
-    }
-
-    public GameObject GetTile()
-    {
-        GameObject _tilePrefab = new GameObject();
-        return _tilePrefab;
+        return null;
     }
 }
 
-    /*
-    // Confirms that all variables are assigned
-    public GameObject SetTileInfo(TileType _tileType, int _tilePosX, int _tilePosY)
+// Public method for setting tile type
+public bool SetTileType(TileType tileType)
+{
+    switch (tileType)
     {
-        
-        bool _success = true;
-        _success = tileData.SetTileType(_tileType);
-        _success = tileData.SetTilePos(_tilePosX, _tilePosY);
+        case TileType.Dirt:
+            tileData.tileType = TileType.Dirt;
+            tileData._tileRenderer.sprite = _spriteArray[0];
+            break;
 
-        tileData.isInit = _success;
+        case TileType.DryGrass:
+            tileData.tileType = TileType.DryGrass;
+            tileData._tileRenderer.sprite = _spriteArray[1];
+            break;
 
-        if (isInit == true)
-        {
-            return null;
-        }
-        else
-        {
-            Debug.Log("Tile is not initialized properly.");
-            return null;
-        }
+        case TileType.Grass:
+            tileData.tileType = TileType.Grass;
+            tileData._tileRenderer.sprite = _spriteArray[2];
+            break;
+
+        case TileType.FertileGrass:
+            tileData.tileType = TileType.FertileGrass;
+            tileData._tileRenderer.sprite = _spriteArray[3];
+            break;
+
+        default:
+            tileData.tileType = TileType.Test;
+            tileData._tileRenderer.sprite = _spriteArray[4];
+            break;
     }
 
-    // Public method for setting tile type
-    public bool SetTileType(TileType tileType)
+    return true;
+}
+
+public bool SetTileName(Vector2 tilePos)
+{
+    tileData.tileName = tilePos + " " + tileType;
+    return true;
+}
+
+public bool SetTilePos(Vector2 _tilePos)
+{
+    tileData.tilePos = _tilePos;
+    return true;
+}
+
+public GameObject GetTile()
+{
+    GameObject _tilePrefab = new GameObject();
+    return _tilePrefab;
+}
+}
+
+/*
+// Confirms that all variables are assigned
+public GameObject SetTileInfo(TileType _tileType, int _tilePosX, int _tilePosY)
+{
+
+    bool _success = true;
+    _success = tileData.SetTileType(_tileType);
+    _success = tileData.SetTilePos(_tilePosX, _tilePosY);
+
+    tileData.isInit = _success;
+
+    if (isInit == true)
     {
-        switch (tileType)
-        {
-            case TileType.Dirt:
-                tileData.tileType = TileType.Dirt;
-                tileData._tileRenderer.sprite = _dirt;
-                break;
+        return null;
+    }
+    else
+    {
+        Debug.Log("Tile is not initialized properly.");
+        return null;
+    }
+}
 
-            case TileType.DryGrass:
-                tileData.tileType = TileType.DryGrass;
-                tileData._tileRenderer.sprite = _dryGrass;
-                break;
+// Public method for setting tile type
+public bool SetTileType(TileType tileType)
+{
+    switch (tileType)
+    {
+        case TileType.Dirt:
+            tileData.tileType = TileType.Dirt;
+            tileData._tileRenderer.sprite = _dirt;
+            break;
 
-            case TileType.Grass:
-                tileData.tileType = TileType.Grass;
-                tileData._tileRenderer.sprite = _grass;
-                break;
+        case TileType.DryGrass:
+            tileData.tileType = TileType.DryGrass;
+            tileData._tileRenderer.sprite = _dryGrass;
+            break;
 
-            case TileType.FertileGrass:
-                tileData.tileType = TileType.FertileGrass;
-                tileData._tileRenderer.sprite = _fertileGrass;
-                break;
+        case TileType.Grass:
+            tileData.tileType = TileType.Grass;
+            tileData._tileRenderer.sprite = _grass;
+            break;
 
-            default:
-                tileData.tileType = TileType.Test;
-                tileData._tileRenderer.sprite = _test;
-                break;
-        }
+        case TileType.FertileGrass:
+            tileData.tileType = TileType.FertileGrass;
+            tileData._tileRenderer.sprite = _fertileGrass;
+            break;
 
-        return true;
+        default:
+            tileData.tileType = TileType.Test;
+            tileData._tileRenderer.sprite = _test;
+            break;
     }
 
-    public bool SetTileID(string tileID)
-    {
-        tileData.tileName = tilePosX + " " + tilePosY + " " + tileType;
-        return true;
-    }
+    return true;
+}
 
-    public bool SetTilePos(int x, int y)
-    {
-        tileData.tilePosX = x;
-        tileData.tilePosY = y;
-        return true;
-    }
+public bool SetTileID(string tileID)
+{
+    tileData.tileName = tilePosX + " " + tilePosY + " " + tileType;
+    return true;
+}
 
-    public GameObject GetTile()
-    {
-        GameObject _tilePrefab = new GameObject();
-        return _tilePrefab;
-    }
-    */
+public bool SetTilePos(int x, int y)
+{
+    tileData.tilePosX = x;
+    tileData.tilePosY = y;
+    return true;
+}
+
+public GameObject GetTile()
+{
+    GameObject _tilePrefab = new GameObject();
+    return _tilePrefab;
+}
+*/

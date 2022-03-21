@@ -89,6 +89,7 @@ public class TileManager : MonoBehaviour
     private void CreateChunks()
     {
         int _tileIndex = 0;
+        int _lastParentIndex = 0;
         int nominalXValue;
         int nominalYValue;
 
@@ -103,44 +104,33 @@ public class TileManager : MonoBehaviour
                     {
                         _tiles.Add(Instantiate(_tilePrefab));
 
-                       // _tiles[_tileIndex].SetActive(true);
-
                         if (x == 0 && y == 0)
                         {
-                            nominalXValue = n;
-                            nominalYValue = m;
+                            nominalXValue = m;
+                            nominalYValue = n;
                         }
 
                         else
                         {
-                            nominalXValue = x + m;
-                            nominalYValue = y + n;
+                            nominalXValue = x + n;
+                            nominalYValue = y + m;
                         }
 
                         if (m == 0 && n == 0)
                         {
                             _tiles[_tileIndex].name = nominalXValue + " " + nominalYValue + " Parent";
+                            _lastParentIndex = _tileIndex;
                         }
-
-                        else if (m != 0 && n == 0)
+                        else
                         {
                             _tiles[_tileIndex].name = nominalXValue + " " + nominalYValue + " Child";
 
-                            _tiles[_tileIndex].transform.SetParent(_tiles[_tileIndex - m].transform);
+                            _tiles[_tileIndex].transform.SetParent(_tiles[_lastParentIndex].transform);
                         }
 
-                        else if (m == 0 && n != 0)
+                        if (_tileIndex == _lastParentIndex)
                         {
-                            _tiles[_tileIndex].name = nominalXValue + " " + nominalYValue + " Child";
-
-                            _tiles[_tileIndex].transform.SetParent(_tiles[_tileIndex - n].transform);
-                        }
-
-                        else if (m != 0 && n != 0)
-                        {
-                            _tiles[_tileIndex].name = nominalXValue + " " + nominalYValue + " Child";
-
-                            _tiles[_tileIndex].transform.SetParent(_tiles[_tileIndex - n - m].transform);
+                            // _tiles[_tileIndex].transform.gameObject.SetActive(true);
                         }
 
                         _tiles[_tileIndex].tileType.RetrieveTileType(_tiles[_tileIndex], x + n, y + m, scale, heightMultiplier, octaves, persistance, lacunarity, xOffset, yOffset);
@@ -159,18 +149,46 @@ public class TileManager : MonoBehaviour
         }
     }
 
-    private void UpdateTileType()
+    private void UpdateLoop()
     {
         int _tileIndex = 0;
-
-        for (int x = 0; x < WIDTH; x++)
+        int _parentIndex = 0;
+        for (int y = 0; y < HEIGHT; y += 8)
         {
-            for (int y = 0; y < HEIGHT; y++)
+            for (int x = 0; x < WIDTH; x += 8)
             {
-                _tiles[_tileIndex].tileType.RetrieveTileType(_tiles[_tileIndex], x, y, scale, heightMultiplier, octaves, persistance, lacunarity, xOffset, yOffset);
-
-                _tileIndex++;
+                for (int m = 0; m < CHUNK_SIZE; m++)
+                {
+                    for (int n = 0; n < CHUNK_SIZE; n++)
+                    {
+                        IsChunkActive(_tileIndex, _parentIndex);
+                        // UpdateTileType(_tileIndex, x, y);
+                    }
+                }
             }
         }
     }
+
+    private void IsChunkActive(int _tileIndex, int _parentIndex)
+    {
+        if (_tiles[_tileIndex].tileRenderer.GetComponent<Renderer>().isVisible)
+        {
+            // viewPortRect = Camera.GetComponent<View>
+            _tiles[_parentIndex].transform.gameObject.SetActive(true);
+        }
+
+        else
+        {
+            _tiles[_parentIndex].transform.gameObject.SetActive(false);
+        }
+    }
+
+    private void UpdateTileType(int _tileIndex, int x, int y)
+    {
+        _tiles[_tileIndex].tileType.RetrieveTileType(_tiles[_tileIndex], x, y, scale, heightMultiplier, octaves, persistance, lacunarity, xOffset, yOffset);
+
+        _tileIndex++;
+    }
+
+ 
 }
