@@ -273,8 +273,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tilePrefab: {fileID: 3107422116097378640, guid: f47a45fe3f9b24985a73e45d2be70edc, type: 3}
   _camera: {fileID: 519420031}
+  chunkCount: 10
+  CHUNK_SIZE: 8
   WIDTH: 200
   HEIGHT: 100
+  TILE_COUNT: 0
   scale: 20
   heightMultiplier: 100
   octaves: 4
