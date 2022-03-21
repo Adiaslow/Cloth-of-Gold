@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer _tileRenderer;
 
-    private Tile tileData;
+    public SetTileType tileType;
 
+    [SerializeField] public SpriteRenderer tileRenderer;
+
+    private Tile _tileData;
+}
+
+
+    /*
     // Tile variables
     public TileType tileType { get; private set; }
     public string tileName { get; private set; }
@@ -22,25 +28,23 @@ public class Tile : MonoBehaviour
 
 
     // Confirms that all variables are assigned
-    public Tile InitTile(TileType _tileType, string _tileName, Vector2 _tilePos)
+    public Tile InitTile(TileType _tileType, Vector2 _tilePos)
     {
 
         bool _success = true;
         _success = tileData.SetTileType(_tileType);
-        _success = tileData.SetTileName(_tileName);
+        _success = tileData.SetTileName(_tilePos);
         _success = tileData.SetTilePos(_tilePos);
 
         tileData.isInit = _success;
 
         if (isInit == true)
         {
-            Debug.Log("TileSpawned!");
-            return tileData;
+          return tileData;
         }
         else
         {
-            Debug.Log("Tile is not initialized properly.");
-            return tileData;
+            return null;
         }
     }
 
@@ -78,7 +82,7 @@ public class Tile : MonoBehaviour
         return true;
     }
 
-    public bool SetTileName(string tileID)
+    public bool SetTileName(Vector2 tilePos)
     {
         tileData.tileName = tilePos + " " + tileType;
         return true;
