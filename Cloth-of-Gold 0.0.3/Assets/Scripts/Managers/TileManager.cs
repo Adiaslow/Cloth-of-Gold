@@ -5,17 +5,19 @@ using UnityEngine;
 public class TileManager : MonoBehaviour
 {
     [SerializeField] private Tile _tilePrefab;
-    [SerializeField] private Camera _camera;
-
     private List<Tile> _tiles = new List<Tile>();
 
-    public int chunkCount = 2;
-    public int CHUNK_SIZE = 8;
+    [SerializeField] private Sector _sectorPrefab;
+    private List<Sector> _sectors = new List<Sector>();
+
+    public int sectorCount = 2;
+    public int SECTOR_SIZE;
 
     public int WIDTH;
     public int HEIGHT;
 
     public int TILE_COUNT = 0;
+    public int SECTOR_COUNT = 0;
 
     [SerializeField] private float scale = 1;
     [SerializeField] private float heightMultiplier = 100;
@@ -25,11 +27,14 @@ public class TileManager : MonoBehaviour
     [SerializeField] private float xOffset = 0;
     [SerializeField] private float yOffset = 0;
 
+    [SerializeField] private Camera _camera;
+
     private void Start()
     {
+        SECTOR_SIZE = _sectorPrefab.SECTOR_SIZE;
+
         GetWidthAndHeight();
-        CreateChunks();
-        // CreateTiles();
+        CreateSectors();
     }
 
     private void Update()
@@ -37,106 +42,85 @@ public class TileManager : MonoBehaviour
         // UpdateTileType();
     }
 
-    private void CreateTiles()
-    {
-        int _tileIndex = 0;
-
-        for (int x = 0; x < WIDTH; x++)
-        {
-            for (int y = 0; y < HEIGHT; y++)
-            {
-
-                _tiles.Add(Instantiate(_tilePrefab));
-
-
-                _tiles[_tileIndex].GetComponent<Renderer>().enabled = true;
-
-                _tiles[_tileIndex].name = x + " " + y;
-
-
-                _tiles[_tileIndex].tileType.RetrieveTileType(_tiles[_tileIndex], x, y, scale, heightMultiplier, octaves, persistance, lacunarity, xOffset, yOffset);
-
-                float xPos = x - WIDTH / 2 + 0.5f;
-                float yPos = y - HEIGHT / 2 + 0.5f;
-
-                _tiles[_tileIndex].transform.Translate(new Vector2(xPos, yPos));
-
-                _tileIndex++;
-            }
-        }
-    }
-
     private void GetWidthAndHeight()
     {
-        if (chunkCount == 0)
+        if (sectorCount == 0)
         {
             WIDTH = HEIGHT = 0;
         }
 
-        else if (chunkCount % 2 != 0)
+        else if (sectorCount % 2 != 0)
         {
-            WIDTH = CHUNK_SIZE * chunkCount;
+            WIDTH = SECTOR_SIZE * sectorCount;
         }
 
-        else if (chunkCount % 2 == 0)
+        else
         {
-            WIDTH = CHUNK_SIZE * chunkCount;
-            HEIGHT = CHUNK_SIZE * chunkCount / 2;
+            WIDTH = SECTOR_SIZE * sectorCount;
+            HEIGHT = SECTOR_SIZE * sectorCount / 2;
         }
 
     }
 
-    private void CreateChunks()
+    private void CreateSectors()
     {
         int _tileIndex = 0;
-        int _lastParentIndex = 0;
-        int nominalXValue;
-        int nominalYValue;
+        int _sectorIndex = 0;
+        int _sectorXValue = 0;
+        int _sectorYValue = 0;
+        int _tileXValue = 0;
+        int _tileYValue = 0;
 
-        
+        float xPos;
+        float yPos;
+
         for (int y = 0; y < HEIGHT; y += 8)
         {
+            _sectorXValue = 0;
+
             for (int x = 0; x < WIDTH; x += 8)
             {
-                for (int m = 0; m < CHUNK_SIZE; m++)
+                _sectors.Add(Instantiate(_sectorPrefab));
+
+                _sectors[_sectorIndex].name = _sectorXValue + " " + _sectorYValue + " Sector";
+
+                _sectors[_sectorIndex].transform.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0, 0);
+
+                _sectors[_sectorIndex].transform.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(SECTOR_SIZE, SECTOR_SIZE);
+
+
+                // _sectors[_sectorIndex].transform.gameObject.SetActive(false);
+
+
+                xPos = x - WIDTH / 2 + SECTOR_SIZE / 2;
+                yPos = y - HEIGHT / 2 + SECTOR_SIZE / 2;
+
+                _sectors[_sectorIndex].transform.Translate(new Vector2(xPos, yPos));
+
+                SECTOR_COUNT++;
+
+                for (int m = 0; m < SECTOR_SIZE; m++)
                 {
-                    for (int n = 0; n < CHUNK_SIZE; n++)
+                    for (int n = 0; n < SECTOR_SIZE; n++)
                     {
                         _tiles.Add(Instantiate(_tilePrefab));
 
-                        if (x == 0 && y == 0)
-                        {
-                            nominalXValue = m;
-                            nominalYValue = n;
-                        }
+                        _tileXValue = x + n;
+                        _tileYValue = x + m;
 
-                        else
-                        {
-                            nominalXValue = x + n;
-                            nominalYValue = y + m;
-                        }
+                        _tiles[_tileIndex].name = _tileXValue + " " + _tileYValue + " Tile";
 
-                        if (m == 0 && n == 0)
-                        {
-                            _tiles[_tileIndex].name = nominalXValue + " " + nominalYValue + " Parent";
-                            _lastParentIndex = _tileIndex;
-                        }
-                        else
-                        {
-                            _tiles[_tileIndex].name = nominalXValue + " " + nominalYValue + " Child";
+                        _tiles[_tileIndex].transform.SetParent(_sectors[_sectorIndex].transform);
 
-                            _tiles[_tileIndex].transform.SetParent(_tiles[_lastParentIndex].transform);
-                        }
-
-                        if (_tileIndex == _lastParentIndex)
+                        if (_tileIndex == _sectorIndex)
                         {
                             // _tiles[_tileIndex].transform.gameObject.SetActive(true);
                         }
 
                         _tiles[_tileIndex].tileType.RetrieveTileType(_tiles[_tileIndex], x + n, y + m, scale, heightMultiplier, octaves, persistance, lacunarity, xOffset, yOffset);
 
-                        float xPos = x + n - WIDTH / 2 + 0.5f;
-                        float yPos = y + m - HEIGHT / 2 + 0.5f;
+                        xPos = x + n - WIDTH / 2 + 0.5f;
+                        yPos = y + m - HEIGHT / 2 + 0.5f;
 
                         _tiles[_tileIndex].transform.Translate(new Vector2(xPos, yPos));
 
@@ -145,7 +129,12 @@ public class TileManager : MonoBehaviour
                         TILE_COUNT++;
                     }
                 }
+
+                _sectorXValue++;
+                _sectorIndex++;
             }
+
+            _sectorYValue++;
         }
     }
 
@@ -157,11 +146,11 @@ public class TileManager : MonoBehaviour
         {
             for (int x = 0; x < WIDTH; x += 8)
             {
-                for (int m = 0; m < CHUNK_SIZE; m++)
+                for (int m = 0; m < SECTOR_SIZE; m++)
                 {
-                    for (int n = 0; n < CHUNK_SIZE; n++)
+                    for (int n = 0; n < SECTOR_SIZE; n++)
                     {
-                        IsChunkActive(_tileIndex, _parentIndex);
+                        // IsSectorActive(_tileIndex, _parentIndex);
                         // UpdateTileType(_tileIndex, x, y);
                     }
                 }
@@ -169,11 +158,10 @@ public class TileManager : MonoBehaviour
         }
     }
 
-    private void IsChunkActive(int _tileIndex, int _parentIndex)
+    private void IsSectorActive(int _tileIndex, int _parentIndex)
     {
         if (_tiles[_tileIndex].tileRenderer.GetComponent<Renderer>().isVisible)
         {
-            // viewPortRect = Camera.GetComponent<View>
             _tiles[_parentIndex].transform.gameObject.SetActive(true);
         }
 

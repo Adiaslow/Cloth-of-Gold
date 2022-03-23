@@ -8,8 +8,8 @@ public class CameraManager : MonoBehaviour
 
     [SerializeField] public Camera cam;
 
-    private float _camHeight;
-    private float _camWidth;
+    public float camHeight;
+    public float camWidth;
     private float _camLeftBound;
     private float _camUpperBound;
     private float _camRightBound;
@@ -20,8 +20,11 @@ public class CameraManager : MonoBehaviour
 
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(1);
-        GetCameraDimensions();
+        yield return new WaitForSeconds(0.5f);
+        CameraDimensions();
+        cam.transform.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(camWidth, camHeight);
+        cam.transform.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0,0);
+
     }
 
     void Update()
@@ -31,15 +34,15 @@ public class CameraManager : MonoBehaviour
         
     }
 
-    private void GetCameraDimensions()
+    private void CameraDimensions()
     {
-        this._camHeight = 2f * cam.orthographicSize;
-        this._camWidth = 2 * cam.orthographicSize * cam.aspect;
+        camHeight = 2f * cam.orthographicSize;
+        camWidth = 2 * cam.orthographicSize * cam.aspect;
 
-        this._camLeftBound = (-_tileManager.WIDTH + _camWidth) / 2;
-        this._camRightBound = (_tileManager.WIDTH - _camWidth) / 2;
-        this._camLowerBound = (-_tileManager.HEIGHT + _camHeight) / 2;
-        this._camUpperBound = (_tileManager.HEIGHT - _camHeight) / 2;
+        _camLeftBound = (-_tileManager.WIDTH + camWidth) / 2;
+        _camRightBound = (_tileManager.WIDTH - camWidth) / 2;
+        _camLowerBound = (-_tileManager.HEIGHT + camHeight) / 2;
+        _camUpperBound = (_tileManager.HEIGHT - camHeight) / 2;
     }
 
     private void CameraPan()
