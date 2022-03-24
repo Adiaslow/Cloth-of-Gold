@@ -34,7 +34,7 @@ public class TileManager : MonoBehaviour
         SECTOR_SIZE = _sectorPrefab.SECTOR_SIZE;
 
         GetWidthAndHeight();
-        CreateSectors();
+        PopulateSectors();
     }
 
     private void Update()
@@ -44,25 +44,10 @@ public class TileManager : MonoBehaviour
 
     private void GetWidthAndHeight()
     {
-        if (sectorCount == 0)
-        {
-            WIDTH = HEIGHT = 0;
-        }
-
-        else if (sectorCount % 2 != 0)
-        {
-            WIDTH = SECTOR_SIZE * sectorCount;
-        }
-
-        else
-        {
-            WIDTH = SECTOR_SIZE * sectorCount;
-            HEIGHT = SECTOR_SIZE * sectorCount / 2;
-        }
-
+        
     }
 
-    private void CreateSectors()
+    private void PopulateSectors()
     {
         int _tileIndex = 0;
         int _sectorIndex = 0;
@@ -137,46 +122,4 @@ public class TileManager : MonoBehaviour
             _sectorYValue++;
         }
     }
-
-    private void UpdateLoop()
-    {
-        int _tileIndex = 0;
-        int _parentIndex = 0;
-        for (int y = 0; y < HEIGHT; y += 8)
-        {
-            for (int x = 0; x < WIDTH; x += 8)
-            {
-                for (int m = 0; m < SECTOR_SIZE; m++)
-                {
-                    for (int n = 0; n < SECTOR_SIZE; n++)
-                    {
-                        // IsSectorActive(_tileIndex, _parentIndex);
-                        // UpdateTileType(_tileIndex, x, y);
-                    }
-                }
-            }
-        }
-    }
-
-    private void IsSectorActive(int _tileIndex, int _parentIndex)
-    {
-        if (_tiles[_tileIndex].tileRenderer.GetComponent<Renderer>().isVisible)
-        {
-            _tiles[_parentIndex].transform.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            _tiles[_parentIndex].transform.gameObject.SetActive(false);
-        }
-    }
-
-    private void UpdateTileType(int _tileIndex, int x, int y)
-    {
-        _tiles[_tileIndex].tileType.RetrieveTileType(_tiles[_tileIndex], x, y, scale, heightMultiplier, octaves, persistance, lacunarity, xOffset, yOffset);
-
-        _tileIndex++;
-    }
-
- 
 }

@@ -16,7 +16,7 @@ public class Sector : MonoBehaviour
     public void TurnOffChildren()=> this.gameObject.GetAllChilds().ForEach(x => x.SetActive(false));
 }
 
-public static class Extentions
+public static class SectorExtentions
 {
     public static List<GameObject> GetAllChilds(this GameObject Go)
     {

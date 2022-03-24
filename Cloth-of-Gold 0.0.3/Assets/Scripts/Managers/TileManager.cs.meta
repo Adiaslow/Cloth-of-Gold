@@ -5,6 +5,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - _tilePrefab: {fileID: 3107422116097378640, guid: f47a45fe3f9b24985a73e45d2be70edc, type: 3}
+  - _sectorPrefab: {fileID: -8382243413809692592, guid: fc11a4413002945b681fa8cfed18dc9d, type: 3}
+  - _camera: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

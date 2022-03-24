@@ -6,7 +6,7 @@ public class CameraManager : MonoBehaviour
 {
     [SerializeField] private TileManager _tileManager;
 
-    [SerializeField] public Camera cam;
+    
 
     public float camHeight;
     public float camWidth;
@@ -20,10 +20,11 @@ public class CameraManager : MonoBehaviour
 
     private IEnumerator Start()
     {
+        Camera cam = Camera.main;
+
         yield return new WaitForSeconds(0.5f);
-        CameraDimensions();
-        cam.transform.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(camWidth, camHeight);
-        cam.transform.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0,0);
+
+        cam.transform.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(cam.GetCameraDimensions()["camWidth"], cam.GetCameraDimensions()["camHeight"]);
 
     }
 
@@ -31,18 +32,6 @@ public class CameraManager : MonoBehaviour
     {
         CameraPan();
         FastPan();
-        
-    }
-
-    private void CameraDimensions()
-    {
-        camHeight = 2f * cam.orthographicSize;
-        camWidth = 2 * cam.orthographicSize * cam.aspect;
-
-        _camLeftBound = (-_tileManager.WIDTH + camWidth) / 2;
-        _camRightBound = (_tileManager.WIDTH - camWidth) / 2;
-        _camLowerBound = (-_tileManager.HEIGHT + camHeight) / 2;
-        _camUpperBound = (_tileManager.HEIGHT - camHeight) / 2;
     }
 
     private void CameraPan()
