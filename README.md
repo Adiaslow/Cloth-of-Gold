@@ -8,5 +8,13 @@ This is my game project "Cloth of Gold" using Unity and written in C#. Named aft
 0.0.5
 
 ## Credits
-- Inspiration From Brianna Torres, Sean Murray, Molly Bedard, GFizz, Taku
-- Tilemap Procedure Generation by Taku
+- Inspiration:
+-   Concepts: 
+-     Brianna Torres, Sean Murray, Molly Bedard, GFizz, Taku, Tarodev, 
+-   Art:
+-     Adam C Younis
+-     Brandon James Greer
+-   Code:
+- Development:
+-   Procedure Generation:
+-     Taku - Tilemap Procedural Generation
