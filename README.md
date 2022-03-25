@@ -22,5 +22,5 @@ Code:
 
 Development:
 
-- Procedure Generation:
--- Taku - Tilemap Procedural Generation
+Procedure Generation:
+- Taku - Tilemap Procedural Generation
