@@ -10,22 +10,22 @@ This is my game project "Cloth of Gold" using Unity and written in C#. Named aft
 # Credits
 ## Inspiration:
 
-## Concepts: 
+Concepts: 
 - Brianna Torres, Sean Murray, Molly Bedard
 
-# Art:
+Art:
 - Adam C Younis
 - Brandon James Greer
 
-# Code:
+Code:
 - GFizz, Taku, Tarodev, Sebastian Lague
 
-# Algorithms:
+Algorithms:
 - John Conway
 - Ken Perlin
 - Stephan Wolfram
 
 ## Development:
 
-# Procedure Generation:
+Procedure Generation:
 - Taku - Tilemap Procedural Generation
