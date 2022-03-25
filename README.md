@@ -8,8 +8,11 @@ This is my game project "Cloth of Gold" using Unity and written in C#. Named aft
 0.0.5
 
 # Credits
-## Inspiration:
+## Development:
+Procedure Generation:
+- Taku - Tilemap Procedural Generation
 
+## Inspiration:
 Concepts: 
 - Brianna Torres, Sean Murray, Molly Bedard
 
@@ -24,8 +27,3 @@ Algorithms:
 - John Conway
 - Ken Perlin
 - Stephan Wolfram
-
-## Development:
-
-Procedure Generation:
-- Taku - Tilemap Procedural Generation
