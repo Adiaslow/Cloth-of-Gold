@@ -8,4 +8,5 @@ This is my game project "Cloth of Gold" using Unity and written in C#. Named aft
 0.0.5
 
 ## Credits
--Tilemap Procedure Generation by Taku
+- Inspiration From Brianna, Sean, Molly, GFizz
+- Tilemap Procedure Generation by Taku
