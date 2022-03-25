@@ -7,8 +7,8 @@ This is my game project "Cloth of Gold" using Unity and written in C#. Named aft
 ## Current Status:
 0.0.5
 
-## Credits
-Inspiration:
+# Credits
+## Inspiration:
 
 ## Concepts: 
 - Brianna Torres, Sean Murray, Molly Bedard
