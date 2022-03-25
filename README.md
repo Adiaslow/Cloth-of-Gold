@@ -18,7 +18,12 @@ Art:
 - Brandon James Greer
 
 Code:
-- GFizz, Taku, Tarodev
+- GFizz, Taku, Tarodev, Sebastian Lague
+
+Algorithms:
+- John Conway
+- Ken Perlin
+- Stephan Wolfram
 
 Development:
 
