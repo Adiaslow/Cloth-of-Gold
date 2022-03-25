@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e707fca3d105e4dacd126dba7d7f30, type: 3}
+  m_Name: Water
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: c834808546f265147a7d7d8563df8572, type: 2}
+  - {fileID: 11400000, guid: 0d50509f0b2441644b65878d84ec37ba, type: 2}
+  - {fileID: 11400000, guid: e570bfee630638c40a8182a4c61e3aa4, type: 2}
+  - {fileID: 11400000, guid: 33e0c850ad47c6a41af7741ef0d1e094, type: 2}

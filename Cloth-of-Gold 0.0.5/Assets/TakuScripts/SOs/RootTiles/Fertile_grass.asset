@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e707fca3d105e4dacd126dba7d7f30, type: 3}
+  m_Name: Fertile_grass
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: cb3ff7e0f469eeb4e9455091a7c6af6c, type: 2}
+  - {fileID: 11400000, guid: 51a1fa73ebcd3ca45a8a5bc6ba66630b, type: 2}
+  - {fileID: 11400000, guid: 50af4c22bffdf0843af46b3067514444, type: 2}
+  - {fileID: 11400000, guid: 3ace88281388e0f46ae22b7aaba1801a, type: 2}

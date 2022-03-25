@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ea360c69ef6724bfbb0249b0bcdac32b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _test: {fileID: 21300000, guid: 2e68ea3e025554c829871468325a16cc, type: 3}
+  - _dirt: {fileID: 21300000, guid: 6974b9a08079c45479396a7de0cf71e4, type: 3}
+  - _grass: {fileID: 21300000, guid: 3a3aeff56cbf049249c1bb7d2b3f154a, type: 3}
+  - _dryGrass: {fileID: 21300000, guid: 4a80d9fa20ab1443d933a0068103f1ac, type: 3}
+  - _fertileGrass: {fileID: 21300000, guid: b7d75aa7b8b0347b4980bc7d551bfd4b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

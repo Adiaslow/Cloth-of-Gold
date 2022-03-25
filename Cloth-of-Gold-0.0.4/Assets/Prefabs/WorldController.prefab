@@ -46,4 +46,4 @@ MonoBehaviour:
   worldTilemap: {fileID: -3429721552533843587, guid: 3bed74caddb2343fd821915f7702bdca, type: 3}
   defaultTile: {fileID: 0}
   chunkSizeInTiles: 16
-  WorldSizeInChunks: {x: 1, y: 1}
+  WorldSizeInChunks: {x: 20, y: 10}
