@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New World Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -7210443149295446082, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -6126784808001340233, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 2689483347407684671, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -8455038574890720309, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 897200638010438019, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -808037978980290539, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 509608430752430296, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 4815984556891814724, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -1141152872319317432, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 2748124181568914272, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -7129325544839216883, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -279709328847589803, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -2280380805013075272, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -4138440274481237353, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -5106138480719808421, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 7798909498174817581, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 775314602777692089, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -8557980730169816028, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -9102818683430141818, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 5322651334261548110, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -1916460444999961924, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 4172448304996349282, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -1142053547859916798, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -8925466556330177624, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -4003321592878334520, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 4831366735571398115, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 4698311980865943839, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: 4273190784334717849, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -1494972454254108448, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  - {fileID: -1241991485493246697, guid: 6275b5d32cf80487f8f0e27e3e118291, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Dirt1
+  - Dry_Grass4
+  - Dirt2
+  - Dry_Grass3
+  - Dirt3
+  - Dry_Grass2
+  - Dirt4
+  - Dry_Grass1
+  - Fertile_Grass
+  - Dirt
+  - Sand3
+  - Sand2
+  - Sand1
+  - Water1
+  - Sand4
+  - Water2
+  - Water3
+  - Water4
+  - Water5
+  - Dry_Grass
+  - Grass4
+  - Grass1
+  - Grass3
+  - Grass2
+  - Sand
+  - Fertile_Grass4
+  - Fertile_Grass3
+  - Fertile_Grass2
+  - Fertile_Grass1
+  - Grass
+  m_RenderDataMap: {}
+  m_Tag: New World Atlas
+  m_IsVariant: 0

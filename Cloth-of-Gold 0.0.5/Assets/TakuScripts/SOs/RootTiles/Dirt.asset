@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Dirt
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 11400000, guid: a850b4d2f1e4a6145ad063f238f101bd, type: 2}
-  - {fileID: 11400000, guid: 607e05665d77f284da00a61da09ec5bb, type: 2}
-  - {fileID: 11400000, guid: d20b0dfef177a164eae9e4ce40c2356b, type: 2}
-  - {fileID: 11400000, guid: b8205a3896d410d47958a1533f9b336d, type: 2}
+  - {fileID: 11400000, guid: 1b6ddaf49d754456da88115e17df340a, type: 2}
+  - {fileID: 11400000, guid: c18848ee64140400f84da6fbff7be52f, type: 2}
+  - {fileID: 11400000, guid: dfeb2135c57d44cab8f4145bdeededeb, type: 2}
+  - {fileID: 11400000, guid: 00b726f36092b4bd8929bd77db4dbadb, type: 2}
+  - {fileID: 11400000, guid: e18ecb23624794c8886a4eb3a9bbd6dc, type: 2}

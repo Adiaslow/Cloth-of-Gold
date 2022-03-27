@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scale: 10
   heightMultiplier: 100
-  octaves: 4
-  persistance: 0.75
-  lacunarity: 1
+  octaves: 5
+  persistance: 0.725
+  lacunarity: 3
   xOffset: 1
   yOffset: 1

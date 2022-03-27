@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Fertile_grass
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 11400000, guid: cb3ff7e0f469eeb4e9455091a7c6af6c, type: 2}
-  - {fileID: 11400000, guid: 51a1fa73ebcd3ca45a8a5bc6ba66630b, type: 2}
-  - {fileID: 11400000, guid: 50af4c22bffdf0843af46b3067514444, type: 2}
-  - {fileID: 11400000, guid: 3ace88281388e0f46ae22b7aaba1801a, type: 2}
+  - {fileID: 11400000, guid: 9c3e703669eab4d78916825f7f9df5a0, type: 2}
+  - {fileID: 11400000, guid: 15530e14020c44dc9891cc5a02261900, type: 2}
+  - {fileID: 11400000, guid: a932edb2f230e4852b2998e59ac1388a, type: 2}
+  - {fileID: 11400000, guid: 2a51790c253db4b5b92e30ba096ece4b, type: 2}
+  - {fileID: 11400000, guid: 48bea23621c8d4ad3a9071291b4836e2, type: 2}

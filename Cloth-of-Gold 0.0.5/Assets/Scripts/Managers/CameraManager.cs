@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraManager : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class CameraManager : MonoBehaviour
 
     [SerializeField] public Camera cam;
 
+    public Button zoomInButton;
+    public Button zoomOutButton;
+
     private float _camHeight;
     private float _camWidth;
     private float _camLeftBound;
@@ -16,11 +20,19 @@ public class CameraManager : MonoBehaviour
     private float _camRightBound;
     private float _camLowerBound;
 
+    public float zoomStepSize;
+    public float zoomMin;
+    public float zoomMax;
 
-    private int _speed = -1;
+    private float _speed = 3;
 
     private IEnumerator Start()
     {
+        Button zoomInBtn = zoomInButton.GetComponent<Button>();
+        zoomInBtn.onClick.AddListener(ZoomIn);
+        Button zoomOutBtn = zoomOutButton.GetComponent<Button>();
+        zoomOutBtn.onClick.AddListener(ZoomOut);
+
         yield return new WaitForSeconds(1);
         GetCameraDimensions();
     }
@@ -45,8 +57,8 @@ public class CameraManager : MonoBehaviour
 
     private void CameraPan()
     {
-        float xAxisValue = Input.GetAxis("Horizontal") * _speed;
-        float yAxisValue = Input.GetAxis("Vertical") * _speed;
+        float xAxisValue = Input.GetAxis("Horizontal") * -(1/_speed);
+        float yAxisValue = Input.GetAxis("Vertical") * -(1/_speed);
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x - xAxisValue, _camLeftBound, _camRightBound),
                                          Mathf.Clamp(transform.position.y - yAxisValue, _camLowerBound, _camUpperBound),
@@ -57,10 +69,24 @@ public class CameraManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
 
-            _speed *= 2;
+            _speed /= 2;
 
         if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
 
-            _speed = -2;
+            _speed *= 2;
+    }
+
+    public void ZoomIn()
+    {
+        transform.localScale = new Vector3(Mathf.Clamp(transform.localScale.x - zoomStepSize, zoomMin, zoomMax),
+                                         Mathf.Clamp(transform.localScale.y - zoomStepSize, zoomMin, zoomMax),
+                                                     transform.localScale.z);
+    }
+
+    public void ZoomOut()
+    {
+        transform.localScale = new Vector3(Mathf.Clamp(transform.localScale.x + zoomStepSize, zoomMin, zoomMax),
+                                          Mathf.Clamp(transform.localScale.y + zoomStepSize, zoomMin, zoomMax),
+                                                      transform.localScale.z);
     }
 }
