@@ -245,7 +245,7 @@ MonoBehaviour:
   m_AssetsPPU: 32
   m_RefResolutionX: 1920
   m_RefResolutionY: 1080
-  m_UpscaleRT: 0
+  m_UpscaleRT: 1
   m_PixelSnapping: 1
   m_CropFrameX: 0
   m_CropFrameY: 0
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   worldTilemap: {fileID: 2107042825}
   worldTiles: {fileID: 11400000, guid: 958f628bd0b64d646b3af1f59fca7e15, type: 2}
   chunkSizeInTiles: 16
-  WorldSizeInChunks: {x: 30, y: 30}
+  WorldSizeInChunks: {x: 50, y: 50}
   worldTransformer: {fileID: 11400000, guid: 33a4f60e44d581f439767d95ce990cab, type: 2}
   rc: {fileID: 2116376537}
 --- !u!4 &2116376536

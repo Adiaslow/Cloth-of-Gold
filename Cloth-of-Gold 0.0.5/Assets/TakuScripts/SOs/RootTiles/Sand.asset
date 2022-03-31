@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e707fca3d105e4dacd126dba7d7f30, type: 3}
   m_Name: Sand
   m_EditorClassIdentifier: 
-  tiles: []
+  tiles:
+  - {fileID: 11400000, guid: e3a8071fbdc024ad2bab7ec662f7ce73, type: 2}
+  - {fileID: 11400000, guid: 603124733ef634b7c8f56bc472274e0c, type: 2}
+  - {fileID: 11400000, guid: 28a16b2e6cca641afa243da4bf323c54, type: 2}
+  - {fileID: 11400000, guid: 8e4857e4dd5494f6ab65acae494619e6, type: 2}
+  - {fileID: 11400000, guid: 99e1414bfbde54ce28ffaae4fada9548, type: 2}
+  - {fileID: 11400000, guid: 99e1414bfbde54ce28ffaae4fada9548, type: 2}
+  - {fileID: 11400000, guid: 99e1414bfbde54ce28ffaae4fada9548, type: 2}
+  - {fileID: 11400000, guid: 99e1414bfbde54ce28ffaae4fada9548, type: 2}
+  - {fileID: 11400000, guid: 99e1414bfbde54ce28ffaae4fada9548, type: 2}
+  - {fileID: 11400000, guid: 99e1414bfbde54ce28ffaae4fada9548, type: 2}
