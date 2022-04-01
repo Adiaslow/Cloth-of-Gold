@@ -30,7 +30,6 @@ public class WorldController : MonoBehaviour
 	[SerializeField] private WorldTransformer_SO worldTransformer;
 	[SerializeField] private RenderController rc;
 
-
 	private void Awake() {
 		_instance = this;
 		CB_SetTile += SetTile;

@@ -7,6 +7,4 @@ using UnityEngine.Tilemaps;
 public class RootCursor_SO : ScriptableObject
 {
 	public List<TileBase> cursors;
-
-	public TileBase getRndCursor() => cursors[UnityEngine.Random.Range(0, cursors.Count)];
 }

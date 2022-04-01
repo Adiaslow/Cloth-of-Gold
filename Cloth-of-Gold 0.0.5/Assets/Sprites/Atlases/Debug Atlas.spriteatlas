@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Debug Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -1798794956662974052, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -8253183145902237937, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: 176383117073722498, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -909019279043107913, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -3630428129229191778, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -2261490036707910730, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: 4573722985312847063, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: 7524542559651242450, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: 2592980317302770501, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -5955123514689552847, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -5606190659210362169, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -670936227755661173, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -1563585007720209520, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -4928619640940059278, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -4390599337080794783, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: 6083853496131425450, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: 8884187022946831564, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -2699223409750066599, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -8847062001671767093, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  - {fileID: -6324763697480547621, guid: 8fa9c17834a3bf94bbcc17f966743563, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - DryGrass_1
+  - DryGrass_3
+  - Dirt_4
+  - DryGrass_2
+  - DryGrass_4
+  - Dirt_1
+  - Dirt_3
+  - Dirt_2
+  - FertileGrass_1
+  - FertileGrass_3
+  - FertileGrass_2
+  - Grass_4
+  - FertileGrass_4
+  - Grass_2
+  - Grass_3
+  - Grass_1
+  - Water_4
+  - Water_1
+  - Water_3
+  - Water_2
+  m_RenderDataMap: {}
+  m_Tag: Debug Atlas
+  m_IsVariant: 0
