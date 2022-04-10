@@ -20,14 +20,20 @@ Sprite Design:
 
 ## Inspiration:
 Concepts: 
-- Brianna Torres, Sean Murray, Molly Bedard
+- Brianna Torres
+- Sean Murray
+- Molly Bedard
 
 Art:
 - Adam C Younis
 - Brandon James Greer
+- Slynyrd
 
 Code:
-- GFizz, Taku, Tarodev, Sebastian Lague
+- GFizz
+- Taku
+- Tarodev
+- Sebastian Lague
 
 Algorithms:
 - John Conway - Conway's Game of Life
