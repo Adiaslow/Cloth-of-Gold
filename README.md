@@ -16,7 +16,7 @@ Procedural Generation:
 
 Sprite Design:
 - Adam Murray
-- Hylen James
+- Hylen James - Structures
 
 ## Inspiration:
 Concepts: 
