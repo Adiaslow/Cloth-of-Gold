@@ -9,8 +9,12 @@ This is my game project "Cloth of Gold" using Unity and written in C#. Named aft
 
 # Credits
 ## Development:
-Procedure Generation:
+Procedural Generation:
 - Taku - Tilemap Procedural Generation
+
+Sprite Design:
+- Adam Murray
+- Hylen James
 
 ## Inspiration:
 Concepts: 
