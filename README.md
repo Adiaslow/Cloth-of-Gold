@@ -30,6 +30,5 @@ Code:
 - GFizz, Taku, Tarodev, Sebastian Lague
 
 Algorithms:
-- John Conway
-- Ken Perlin
-- Stephan Wolfram
+- John Conway - Conway's Game of Life
+- Ken Perlin - Perlin Noise
