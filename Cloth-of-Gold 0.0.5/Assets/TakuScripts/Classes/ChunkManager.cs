@@ -64,6 +64,7 @@ public class ChunkManager
 			Debug.Log($"{i} ");
 		}
 	}
+
 	/// <summary>
 	/// Blank initiation of chunks
 	/// </summary>

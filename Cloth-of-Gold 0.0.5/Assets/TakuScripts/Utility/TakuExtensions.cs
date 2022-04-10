@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public static class Extensions
+public static class TakuExtensions
 {
 	public static void Populate<T>(this T[] arr, T value) {
 		for (int i = 0; i < arr.Length; i++) {

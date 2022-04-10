@@ -12,6 +12,8 @@ public class Chunk
 	public Vector3Int[] tilePositions;
 	private int size;
 	private int chunkTileTotalCount;
+
+
 	public bool inChunkBounds(Vector3Int worldPos) {
 		if (worldPos.x >= start.x && worldPos.x < end.x) {
 			if (worldPos.y >= start.y && worldPos.y < end.y)
@@ -29,8 +31,10 @@ public class Chunk
 
 		initArray(ref tiles);
 		initArray(ref tilePositions);
+
 		PopulateTilePositions();
 	}
+
 
 	private void PopulateTilePositions() {
 		int i = 0;
