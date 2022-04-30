@@ -9,21 +9,32 @@ This is my game project "Cloth of Gold" using Unity and written in C#. Named aft
 
 # Credits
 ## Development:
-Procedure Generation:
+- Adam Murray
+
+Procedural Generation:
 - Taku - Tilemap Procedural Generation
+
+Sprite Design:
+- Adam Murray
+- Hylen James - Structures
 
 ## Inspiration:
 Concepts: 
-- Brianna Torres, Sean Murray, Molly Bedard
+- Brianna Torres
+- Sean Murray
+- Molly Bedard
 
 Art:
 - Adam C Younis
 - Brandon James Greer
+- Slynyrd
 
 Code:
-- GFizz, Taku, Tarodev, Sebastian Lague
+- GFizz
+- Taku
+- Tarodev
+- Sebastian Lague
 
 Algorithms:
-- John Conway
-- Ken Perlin
-- Stephan Wolfram
+- John Conway - Conway's Game of Life
+- Ken Perlin - Perlin Noise
