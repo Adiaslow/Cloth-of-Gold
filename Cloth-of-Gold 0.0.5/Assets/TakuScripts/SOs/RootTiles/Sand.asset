@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e707fca3d105e4dacd126dba7d7f30, type: 3}
   m_Name: Sand
   m_EditorClassIdentifier: 
+  isFatal: 0
+  isBuildable: 0
+  isFarmable: 0
+  flammability: 5
   tiles:
   - {fileID: 11400000, guid: e3a8071fbdc024ad2bab7ec662f7ce73, type: 2}
   - {fileID: 11400000, guid: 603124733ef634b7c8f56bc472274e0c, type: 2}

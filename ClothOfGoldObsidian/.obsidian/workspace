@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "4896c09fac6ebef9",
+    "type": "split",
+    "children": [
+      {
+        "id": "49df212a22b1f940",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "UnitManager.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "65bf53de14e07753",
+    "type": "split",
+    "children": [
+      {
+        "id": "27f77ccc63d95515",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "52513904118b2b3d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "8c88c0d038306514",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "300bd29ab34d9337",
+    "type": "split",
+    "children": [
+      {
+        "id": "966d3303ffc364a7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dcbbd69533d55455",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "UnitManager.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "49df212a22b1f940",
+  "lastOpenFiles": [
+    "UnitManager.md"
+  ]
+}

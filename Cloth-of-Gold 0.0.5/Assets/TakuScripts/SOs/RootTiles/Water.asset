@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e707fca3d105e4dacd126dba7d7f30, type: 3}
   m_Name: Water
   m_EditorClassIdentifier: 
+  isFatal: 1
+  isBuildable: 0
+  isFarmable: 0
+  flammability: 0
   tiles:
   - {fileID: 11400000, guid: 11a4929d527e940389e481e53aeca529, type: 2}

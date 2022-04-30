@@ -11,10 +11,15 @@ public class MouseController : MonoBehaviour
     [SerializeField] private Tilemap unitMap = null;
     [SerializeField] private Tilemap cursorMap = null;
     [SerializeField] private List<Tile> cursors = null;
-    [SerializeField] private UnitController unitController;
+    [SerializeField] private UnitManager unitManager;
 
     private Vector3Int previousMousePos = new Vector3Int();
     private Vector3Int mousePos = new Vector3Int();
+
+    private void Awake()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -52,7 +57,7 @@ public class MouseController : MonoBehaviour
         // Left mouse click -> add path tile
         if (Input.GetMouseButtonDown(0) && Time.timeScale == 0)
         {
-            unitController.CheckSetUnit(new Vector3Int(mousePos.x, mousePos.y, Mathf.FloorToInt(unitMap.transform.position.z)));
+            unitManager.SetUnit(new Vector3Int(mousePos.x, mousePos.y, Mathf.FloorToInt(unitMap.transform.position.z)));
         }
     }
 

@@ -11,11 +11,10 @@ public class GameController : MonoBehaviour
     // Call Backs
 
     // Managers
-    private UnitManager unitManager;
-    public UnitManager getUnitManager => unitManager;
+
 
     // Controllers
-    [SerializeField] private UnitController unitController;
+    [SerializeField] private UnitManager unitManager;
 
     // Tile Maps
     [SerializeField] private Tilemap tileMap;
@@ -28,6 +27,7 @@ public class GameController : MonoBehaviour
 
     public int numPlayers = 1;
 
+    public float secondsBetweenIterations = 0.15f;
     public int numInterationsPerRound = 144;
     public int iteration = 0;
 
@@ -45,6 +45,8 @@ public class GameController : MonoBehaviour
     // Awake
     private void Awake()
     {
+        new WaitForSeconds(secondsBetweenIterations);
+
         //for (int p = 0; p <= numPlayers; p++)
         //{
 
@@ -84,7 +86,7 @@ public class GameController : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(secondsBetweenIterations);
 
             if (Time.timeScale != 0) CountIterations();
 
@@ -97,7 +99,8 @@ public class GameController : MonoBehaviour
                     curPos.y = y;
                     curPos.z = unitZ;
 
-                    unitController.SetData(curPos);
+        
+                    unitManager.SetData(curPos);
                 }
             }
 
@@ -110,7 +113,7 @@ public class GameController : MonoBehaviour
                     curPos.y = y;
                     curPos.z = unitZ;
 
-                    unitController.SetLife(curPos);
+                    unitManager.SetLife(curPos);
                 }
             }
 
